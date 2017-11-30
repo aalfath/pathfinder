@@ -2304,6 +2304,7 @@ define([
                     case 'change_status_hostile':
                     case 'change_status_empty':
                     case 'change_status_unscanned':
+                    case 'change_status_target':
                         // change system status
                         currentSystem.getMapOverlay('timer').startMapUpdateCounter();
 

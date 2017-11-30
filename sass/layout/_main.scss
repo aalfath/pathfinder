@@ -755,6 +755,11 @@ table{
   color: $teal-lighter;
 }
 
+.pf-system-status-target{
+  border-color: $redBright !important;
+  color: $redBright;
+}
+
 // system status within label
 .pf-system-info-status-label{
   background-color: $gray-light;
@@ -778,9 +783,15 @@ table{
     background-color: $green;
   }
 
+
   &.pf-system-status-unscanned{
     background-color: $teal-lighter;
   }
+
+  &.pf-system-status-target{
+    background-color: $redBright;
+  }
+
 }
 
 // system effect info dialog ======================================================================

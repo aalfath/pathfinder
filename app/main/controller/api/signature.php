@@ -108,6 +108,15 @@ class Signature extends Controller\AccessController {
                     }
 
                     if($signature->dry()){
+                        // description should not overwrite existing description
+                        if( !empty($signature->description) ){
+                            unset( $data['description'] );
+                        } else {
+                            if ($data['groupId'] == 4) {
+                                $data['description'] = "Jangan diabisin, biar respawn dapet gas lagi besok";
+                            }
+                        }
+
                         // new signature
                         $signature->systemId = $system;
                         $signature->setData($data);
@@ -136,6 +145,15 @@ class Signature extends Controller\AccessController {
                                 $newData['connectionId'] = (int)$newData['connectionId'];
                             }
 
+                            // description should not overwrite existing description
+                            if( !empty($signature->description) ){
+                                unset( $data['description'] );
+                            } else {
+                                if ($data['groupId'] == 4) {
+                                    $data['description'] = "Jangan diabisin, biar respawn dapet gas lagi besok";
+                                }
+                            }
+
                         }else{
                             // update complete signature (signature reader dialog)
 
@@ -145,6 +163,10 @@ class Signature extends Controller\AccessController {
                             // description should not overwrite existing description
                             if( !empty($signature->description) ){
                                 unset( $data['description'] );
+                            } else {
+                                if ($data['groupId'] == 4) {
+                                    $data['description'] = "Jangan diabisin, biar respawn dapet gas lagi besok";
+                                }
                             }
 
                             // prevent some data from overwrite manually changes
@@ -210,7 +232,6 @@ class Signature extends Controller\AccessController {
                         }
                     }
                 }
-
 
             }
         }

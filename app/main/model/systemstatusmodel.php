@@ -71,9 +71,15 @@ class SystemStatusModel extends BasicModel {
         ],
         [
             'id' => 6,
-            'name' => 'unscanned',
-            'label' => 'unscanned',
+            'name' => 'target',
+            'label' => 'target',
             'class' => 'pf-system-status-unscanned'
+        ],
+        [
+            'id' => 7,
+            'name' => 'target',
+            'label' => 'target',
+            'class' => 'pf-system-status-target'
         ]
     ];
 
