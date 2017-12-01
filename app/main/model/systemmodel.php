@@ -580,7 +580,7 @@ class SystemModel extends AbstractMapTrackingModel {
             $this->getMap()->isSlackChannelEnabled($slackChannelKey)
         ){
             $isValidLog = true;
-            $log->addHandler('slackRally', null, $this->getMap()->getSlackWebHookConfig($slackChannelKey));
+            $log->addHandler('slackRally', null, $this->getMap()->getSlackWebHookRallyConfig($slackChannelKey));
         }
 
         // Mail poke ------------------------------------------------------------------------------

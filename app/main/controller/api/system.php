@@ -248,9 +248,11 @@ class System extends Controller\AccessController {
                 unset($systemData['mapId']);
 
                 if ($systemModel->regionId == '11000029' || $systemModel->regionId == '11000021') {
-                    $systemData['description'] = "Target evict! Please keep a scanner alt here and gather intel!";
-                    $systemData['locked'] = 1;
-                    $systemData['statusId'] = 7;
+                    if ($systemModel->systemId != '31002335' && $systemModel->systemId != '31001689') {
+                        $systemData['description'] = "Target evict! Please keep a scanner alt here and gather intel!";
+                        $systemData['locked'] = 1;
+                        $systemData['statusId'] = 7;
+                    }
                 }
 
                 // set/update system

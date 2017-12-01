@@ -1001,6 +1001,23 @@ class MapModel extends AbstractMapTrackingModel {
     }
 
     /**
+     * get Config for Slack WebHook cURL calls
+     * -> https://api.slack.com/incoming-webhooks
+     * @param string $channel
+     * @return \stdClass
+     */
+    public function getSlackWebHookRallyConfig(string $channel = ''): \stdClass{
+        $config = (object) [];
+        $config->slackWebHookURL = "https://discordapp.com/api/webhooks/326357161888448512/GQqWOwFFjOqnDcoRPnZwEQ_ALLO6w_fuAvwCOy2jIbcY4L0U0NC4A95WT0Z-hLL3JnkK/slack";
+        $config->slackUsername = $this->slackUsername;
+        $config->slackIcon = $this->slackIcon;
+        if($channel && $this->exists($channel)){
+            $config->slackChannel = $this->$channel;
+        }
+        return $config;
+    }
+
+    /**
      * get Config for SMTP connection and recipient address
      * @param string $type
      * @param bool $addJson
