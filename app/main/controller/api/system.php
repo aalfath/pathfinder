@@ -237,8 +237,6 @@ class System extends Controller\AccessController {
 
                     $systemModel->statusId = isset($systemData['statusId']) ? $systemData['statusId'] : $defaultStatusId;
 
-                    $systemModel->description = $systemData['description'];
-
                     // map is not changeable for a system! (security)
                     $systemData['mapId'] = $map;
                 }
@@ -248,6 +246,12 @@ class System extends Controller\AccessController {
                 // "statusId" was set above
                 unset($systemData['statusId']);
                 unset($systemData['mapId']);
+
+                if ($systemModel->regionId == '11000029' || $systemModel->regionId == '11000021') {
+                    $systemData['description'] = "Target evict! Please keep a scanner alt here and gather intel!";
+                    $systemData['locked'] = 1;
+                    $systemData['statusId'] = 7;
+                }
 
                 // set/update system
                 $systemModel->setData($systemData);
