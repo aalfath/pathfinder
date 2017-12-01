@@ -11,8 +11,8 @@
 
             <div class="checkbox {{#slackRallyEnabled}}checkbox-primary{{/slackRallyEnabled}}">
                 <input id="{{dialogRallyPokeSlackId}}" name="pokeSlack" value="1" type="checkbox" {{#slackRallyEnabled}}checked=""{{/slackRallyEnabled}}{{^slackRallyEnabled}}disabled{{/slackRallyEnabled}}>
-                <label for="{{dialogRallyPokeSlackId}}">Slack poke
-                    <i class="fa fa-fw fa-question-circle pf-help-light" title="Send Slack message to a public channel"></i>
+                <label for="{{dialogRallyPokeSlackId}}">Discord poke
+                    <i class="fa fa-fw fa-question-circle pf-help-light" title="Send Discord message to a public channel"></i>
                 </label>
             </div>
 
@@ -54,7 +54,7 @@
                         {{/desktopRallyEnabled}}
                     </div>
                     <div class="col-xs-6 col-sm-3 text-right">
-                        </i> Slack poke&nbsp;
+                        </i> Discord poke&nbsp;
                         {{#slackRallyEnabled}}
                         <kbd class="txt-color txt-color-success">enabled</kbd>
                         {{/slackRallyEnabled}}

@@ -56,7 +56,7 @@ class RallyLog extends AbstractCharacterLog{
      * @return string
      */
     public function getMessage() : string{
-        return "*New RallyPoint system '{objName}'* _#{objId}_ *map '{channelName}'* _#{channelId}_ ";
+        return "*@everyone New ping in system '{objName}'* _#{objId}_ *map '{channelName}'* _#{channelId}_ ";
     }
 
     /**

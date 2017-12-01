@@ -1942,7 +1942,7 @@ define([
             items: [
                 {icon: 'fa-plus', action: 'add_system', text: 'add system'},
                 {icon: 'fa-lock', action: 'lock_system', text: 'lock system'},
-                {icon: 'fa-volume-up', action: 'set_rally', text: 'set rally point'},
+                {icon: 'fa-volume-up', action: 'set_rally', text: 'set ping'},
                 {icon: 'fa-tags', text: 'set status', subitems: systemStatus},
                 {icon: 'fa-reply fa-rotate-180', text: 'waypoints', subitems: [
                     {subIcon: 'fa-flag-checkered', subAction: 'set_destination', subText: 'set destination'},

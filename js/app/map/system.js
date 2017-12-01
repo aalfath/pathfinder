@@ -110,7 +110,7 @@ define([
                         className: 'btn-default'
                     },
                     success: {
-                        label: '<i class="fa fa-fw fa-volume-up"></i> set rally point',
+                        label: '<i class="fa fa-fw fa-volume-up"></i> set ping',
                         className: 'btn-success',
                         callback: function() {
                             let form = $('#' + config.dialogRallyId).find('form');
